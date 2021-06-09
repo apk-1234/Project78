@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>My family</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>My Family Book</h1>
+        <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" style="width: 30%;" id="member_img">
+        <h4 id="member_name"></h4>
+        <button onclick="update();">Next</button>
+        <script>
+            var images = 
+                ["https://i.postimg.cc/MKdhy06Z/family.jpg", "https://i.postimg.cc/L6HcYQM0/grand-father.png",
+                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDzDyqirDjLHY_CpLD_7fEP77Rw77Uiu3YiA&usqp=CAU", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuRKGa7tL_z8PuJtVcQm1c2RYz2WXZ2APjSQ&usqp=CAU",
+                 "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://i.postimg.cc/bw5W5zSK/mother.jpg"];
+            var names = 
+                ["Family Book", "Ranbir Singh", "Diljeet Singh",
+                "Rocky Singh", "Alia Singh", "Soni Singh"];
+            var i=0;
+            function update()
+            {
+                i++;
+                var family_members = 5;
+                if(i> family_members)
+                    i=0;
+                var updatedimage = images[i];
+                var updatedname = names[i];
+                document.getElementById("member_img").src=updatedimage;
+                document.getElementById("member_name").innerHTML = updatedname;
+            }
+            
+        </script>
+    </body>
+</html>
